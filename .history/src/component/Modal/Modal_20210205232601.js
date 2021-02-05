@@ -30,7 +30,7 @@ export default class Modal extends Component {
       <React.Fragment>
         {(open || this.state.acitve) && (
           <Portal className="modal-portal">
-            <div className={classNameBackDrop} ref={this.backDropRef} onClick={this.props.onClose}>
+            <div className={classNameBackDrop} ref={this.backDropRef} onClick={this.props.on}>
               <div className={classes.content}>{this.props.children}</div>
             </div>
           </Portal>

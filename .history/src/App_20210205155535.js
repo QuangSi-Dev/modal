@@ -12,7 +12,6 @@ class App extends Component {
   };
   isOpenHandler = (value) => {
     // alert("hh");
-    console.log(value);
     this.setState({ isOpen: value });
   };
   isLockedOpenHandler = (value) => {

@@ -14,12 +14,10 @@ export default class Modal extends Component {
   setActiveHandle = (value) => {
     this.setState({ acitve: value });
   };
-  componentDidMount() {
-    // this.backDropRef.current.addEventListener("click", this.props.onClose);
-  }
+  componentDidMount() {}
   render() {
     if (this.backDropRef.current) {
-      this.backDropRef.current.addEventListener("click", this.props.onClose);
+      this.backDropRef.current.addEventListener("click"this.props.onClose;
     }
     const { open } = this.props;
     let classNameBackDrop = classes.backDrop;
@@ -30,7 +28,7 @@ export default class Modal extends Component {
       <React.Fragment>
         {(open || this.state.acitve) && (
           <Portal className="modal-portal">
-            <div className={classNameBackDrop} ref={this.backDropRef} onClick={this.props.onClose}>
+            <div className={classNameBackDrop} ref={this.backDropRef}>
               <div className={classes.content}>{this.props.children}</div>
             </div>
           </Portal>
