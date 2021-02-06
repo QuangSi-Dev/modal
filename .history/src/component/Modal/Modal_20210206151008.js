@@ -29,8 +29,8 @@ export default class Modal extends Component {
       // window.setTimeout(() => {
       //   document.activeElement.blur();
       // }, 100);
-    } else {
-      classNameBackDrop = classes.backDrop;
+    }else{
+      classNameBackDrop={classes}
     }
 
     return (

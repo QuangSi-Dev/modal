@@ -40,14 +40,11 @@
   background-color: white;
   border-radius: 2px;
   /* transition-duration: 3000ms; */
-  animation: transitionAnimation 0.3s;
 }
 
-@keyframes transitionAnimation {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0px);
-  }
+@keyframes transition {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
 }

@@ -18,7 +18,6 @@ export default class Modal extends Component {
     // this.backDropRef.current.addEventListener("click", this.props.onClose);
   }
   render() {
-    console.log(document.activeElement);
     if (this.backDropRef.current) {
       this.backDropRef.current.addEventListener("click", this.props.onClose);
     }
@@ -26,19 +25,16 @@ export default class Modal extends Component {
     let classNameBackDrop = classes.backDrop;
     if (open) {
       classNameBackDrop = `${classes.backDrop} ${classes.active}`;
-      // window.setTimeout(() => {
-      //   document.activeElement.blur();
-      // }, 100);
-    } else {
-      classNameBackDrop = classes.backDrop;
+      window.setTimeout(() => {
+        document.activeElement.blur())
     }
-
+    
     return (
       <React.Fragment>
         {(open || this.state.acitve) && (
           <Portal className="modal-portal">
             <div className={classNameBackDrop} ref={this.backDropRef} onClick={this.props.onClose}>
-              <div className={classes.modal_content}>{this.props.children}</div>
+              <div className={classes.content}>{this.props.children}</div>
             </div>
           </Portal>
         )}

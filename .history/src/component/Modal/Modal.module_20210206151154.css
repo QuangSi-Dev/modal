@@ -39,15 +39,5 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background-color: white;
   border-radius: 2px;
-  /* transition-duration: 3000ms; */
-  animation: transitionAnimation 0.3s;
-}
-
-@keyframes transitionAnimation {
-  from {
-    transform: translateY(-100px);
-  }
-  to {
-    transform: translateY(0px);
-  }
+  transition-duration: 3000ms;
 }

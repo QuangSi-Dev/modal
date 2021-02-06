@@ -29,15 +29,13 @@ export default class Modal extends Component {
       // window.setTimeout(() => {
       //   document.activeElement.blur();
       // }, 100);
-    } else {
-      classNameBackDrop = classes.backDrop;
     }
 
     return (
       <React.Fragment>
         {(open || this.state.acitve) && (
           <Portal className="modal-portal">
-            <div className={classNameBackDrop} ref={this.backDropRef} onClick={this.props.onClose}>
+            <div className={classesNameBackDrop} ref={this.backDropRef} onClick={this.props.onClose}>
               <div className={classes.modal_content}>{this.props.children}</div>
             </div>
           </Portal>

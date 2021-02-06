@@ -40,14 +40,15 @@
   background-color: white;
   border-radius: 2px;
   /* transition-duration: 3000ms; */
-  animation: transitionAnimation 0.3s;
+  animation: ;
 }
 
 @keyframes transitionAnimation {
-  from {
+  0% {
     transform: translateY(-100px);
   }
-  to {
+
+  100% {
     transform: translateY(0px);
   }
 }

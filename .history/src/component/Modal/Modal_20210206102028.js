@@ -26,11 +26,9 @@ export default class Modal extends Component {
     let classNameBackDrop = classes.backDrop;
     if (open) {
       classNameBackDrop = `${classes.backDrop} ${classes.active}`;
-      // window.setTimeout(() => {
-      //   document.activeElement.blur();
-      // }, 100);
-    } else {
-      classNameBackDrop = classes.backDrop;
+      window.setTimeout(() => {
+        document.activeElement.blur();
+      },);
     }
 
     return (
@@ -38,7 +36,7 @@ export default class Modal extends Component {
         {(open || this.state.acitve) && (
           <Portal className="modal-portal">
             <div className={classNameBackDrop} ref={this.backDropRef} onClick={this.props.onClose}>
-              <div className={classes.modal_content}>{this.props.children}</div>
+              <div className={classes.content}>{this.props.children}</div>
             </div>
           </Portal>
         )}
